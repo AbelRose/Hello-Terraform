@@ -1,8 +1,8 @@
 #定义云厂商
 provider "alicloud" {
   region     = "cn-shanghai"
-  access_key = "LTAI5tQooRvEPFkKofiU6jT9"
-  secret_key = "tzpU0YP1mgahc2hdz9MqVLy3L0aqjT"
+  access_key = var.ALICLOUD_ACCESS_KEY
+  secret_key = var.ALICLOUD_SECRET_KEY
 }
 
 

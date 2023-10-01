@@ -1,5 +1,7 @@
 *.terraform
 .terraform.lock.hcl
 *.tfstate.*
+*.tfstate
 *.svg
+variables.tf
 .vscode
