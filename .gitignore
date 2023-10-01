@@ -3,5 +3,5 @@
 *.tfstate.*
 *.tfstate
 *.svg
-variables.tf
+terraform.tfvars
 .vscode
