@@ -8,12 +8,10 @@ resource "alicloud_slb_load_balancer" "slb" {
 #创建后端默认服务器组
 resource "alicloud_slb_backend_server" "backend_server" {
   load_balancer_id = alicloud_slb_load_balancer.slb.id
-
   backend_servers {
     server_id = var.server_id1
     weight    = 100
   }
-
   backend_servers {
     server_id = var.server_id2
     weight    = 100
@@ -22,8 +20,8 @@ resource "alicloud_slb_backend_server" "backend_server" {
 
 #添加实例的前端监听
 resource "alicloud_slb_listener" "listener" {
-  load_balancer_id          = alicloud_slb_load_balancer.slb.id
-  backend_port              = 80
-  frontend_port             = 80
-  protocol                  = "http"
+  load_balancer_id = alicloud_slb_load_balancer.slb.id
+  backend_port     = 80 # 前端的80
+  frontend_port    = 80 # 后端的80
+  protocol         = "http"
 }
