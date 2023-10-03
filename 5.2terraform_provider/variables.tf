@@ -1,7 +1,7 @@
 variable REGION {
   type = string
   default = ""
-  default = "REGION"
+  description = "REGION"
 }
 
 variable ALICLOUD_ACCESS_KEY {
